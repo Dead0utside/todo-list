@@ -36,6 +36,7 @@ function addTask() {
 	const taskName = document.createElement("p");
 	taskName.className = "task-name";
 	taskName.textContent = taskInputForm1.value;
+	taskInputForm1.value = "";
 
 	const deleteBtn = document.createElement("button");
 	deleteBtn.className = "delete-btn";
