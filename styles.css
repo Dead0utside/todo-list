@@ -16,3 +16,7 @@ root {
 .todo-list {
     border: 1px solid black;
 }
+
+.task-container {
+    display: flex;
+}
