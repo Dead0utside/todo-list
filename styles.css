@@ -12,3 +12,7 @@ root {
     --subtitle: 1.5em;
     --text: 1em;
 }
+
+.todo-list {
+    border: 1px solid black;
+}
