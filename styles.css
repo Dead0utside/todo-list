@@ -1,5 +1,5 @@
 /* Styling goes here */
-root {
+:root {
     /* colors */
     --white: #F9FCFF;
     --light-blue: #ADE8E8;
@@ -15,4 +15,23 @@ root {
 
 .todo-list {
     border: 1px solid black;
+}
+
+.workspace {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vh 5vw;
+    column-gap: 2vw;
+}
+
+.todo-list {
+    background-color: var(--purple);
+    border-radius: 10px;
+    width: 25vw;
+    height: auto;
+    padding: 1.5vh 1.5vw;
+
 }
