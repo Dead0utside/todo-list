@@ -19,10 +19,13 @@ class ToDoList {
 const todoList1 = document.getElementById("todolist-1");
 const taskInputForm1 = document.getElementById("input-1");
 const addTaskButton1 = document.getElementById("submit-1");
+const taskList1 = document.getElementById("task-list-1");
 
 addTaskButton1.addEventListener("click", () => addTask());
 
 function addTask() {
+	const newLi = document.createElement("li");
+
 	let newTaskElement = document.createElement("section");
 	newTaskElement.className = "task-container";
 
@@ -38,8 +41,11 @@ function addTask() {
 	deleteBtn.className = "delete-btn";
 	deleteBtn.id = "delete-btn";
 
-	newTaskElement.appendChild(taskName);
 	newTaskElement.appendChild(checkbox);
+	newTaskElement.appendChild(taskName);
+	newTaskElement.appendChild(deleteBtn);
 
-	todoList1.appendChild(newTaskElement);
+	newLi.appendChild(newTaskElement);
+
+	taskList1.appendChild(newLi);
 }
