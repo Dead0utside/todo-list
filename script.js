@@ -20,6 +20,7 @@ const todoList1 = document.getElementById("todolist-1");
 const taskInputForm1 = document.getElementById("input-1");
 const addTaskButton1 = document.getElementById("submit-1");
 const taskList1 = document.getElementById("task-list-1");
+const deleteButtons1 = document.querySelectorAll(".delete-btn");
 
 let tasks = [];
 let taskId = 0;
@@ -39,6 +40,7 @@ function addTask(tasks, taskId, taskInputForm) {
 	tasks.push(task);
 
 	const newLi = document.createElement("li");
+	newLi.id = `task-${taskId}`;
 
 	let newTaskElement = document.createElement("section");
 	newTaskElement.className = "task-container";
@@ -54,7 +56,8 @@ function addTask(tasks, taskId, taskInputForm) {
 
 	const deleteBtn = document.createElement("button");
 	deleteBtn.className = "delete-btn";
-	deleteBtn.id = "delete-btn";
+	deleteBtn.id = `delete-btn-${taskId}`;
+	deleteBtn.addEventListener("click", () => deleteTask(taskId));
 
 	newTaskElement.appendChild(checkboxElement);
 	newTaskElement.appendChild(taskNameElement);
@@ -63,4 +66,11 @@ function addTask(tasks, taskId, taskInputForm) {
 	newLi.appendChild(newTaskElement);
 
 	taskList1.appendChild(newLi);
+	console.log(tasks);
+}
+
+function deleteTask(taskId) {
+	document.getElementById(`task-${taskId}`).remove();
+	tasks = tasks.filter((task) => task.id !== taskId);
+	console.log(tasks);
 }
