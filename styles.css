@@ -3,6 +3,8 @@
     text-decoration: none;
     outline: none;
     border: none;
+    margin: 0;
+    padding: 0;
 }
 :root {
     /* colors */
@@ -114,4 +116,13 @@ h1 {
 
 .task-container {
     display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.task-list {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
