@@ -109,6 +109,7 @@ ul {
     border-bottom:  .5px solid #123040;
     padding-left: 1vw;
     font-family: var(--font-task);
+    color: var(--dark-blue);
 }
 
 .checkbox {
@@ -152,7 +153,7 @@ ul {
     text-align: center;
     padding: 1vh 1vw 1vh 1vw;
     border-radius: 50%;
-    color: var(--white);
+    color: var(--dark-blue);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -165,5 +166,5 @@ ul {
 }
 
 .delete-btn:hover {
-    color: var(--dark-blue);
+    color: var(--white);
 }
