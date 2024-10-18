@@ -77,3 +77,36 @@ h1 {
     font-size: var(--subtitle);
     width: 3vw;
 }
+
+.task-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-name {
+    flex-grow: 2;
+    border-bottom:  .5px solid #123040;
+    padding-left: 1vw;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.checkbox:checked + .task-name {
+    text-decoration: line-through;
+}
