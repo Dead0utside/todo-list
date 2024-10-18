@@ -82,7 +82,7 @@ h1 {
 
 .task-container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
 }
@@ -111,11 +111,6 @@ h1 {
 
 .checkbox:checked + .task-name {
     text-decoration: line-through;
-}
-
-
-.task-container {
-    display: flex;
 }
 
 ul {
