@@ -29,9 +29,14 @@ addTaskButton1.addEventListener("click", () =>
 );
 
 function addTask(tasks, taskId, taskInputForm) {
+	// TODO validate if the string contains whitespaces or invisible characters
 	const taskName = taskInputForm.value;
+	if (!taskName || taskName === "") {
+		return;
+	}
 
-	let task = new Task(taskId);
+	let task = new Task(taskId, taskName);
+	tasks.push(task);
 
 	const newLi = document.createElement("li");
 
@@ -58,6 +63,4 @@ function addTask(tasks, taskId, taskInputForm) {
 	newLi.appendChild(newTaskElement);
 
 	taskList1.appendChild(newLi);
-
-	tasks.push();
 }
