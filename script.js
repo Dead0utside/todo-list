@@ -29,6 +29,14 @@ addTaskButton1.addEventListener("click", () =>
 	addTask(tasks, taskId, taskInputForm1)
 );
 
+taskInputForm1.addEventListener("keypress", () => {
+	if (event.key === "Enter") {
+		event.preventDefault()
+		addTaskButton1.click();
+	} 
+}
+);
+
 function addTask(tasks, taskId, taskInputForm) {
 	// TODO validate if the string contains whitespaces or invisible characters
 	const taskName = taskInputForm.value;
