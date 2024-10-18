@@ -1,12 +1,12 @@
 // Script goes here
-class Task {
+class ToDoList {
 	constructor(name) {
 		this.name = name;
 		this.done = false;
 	}
 }
 
-class TaskList {
+class Task {
 	constructor(name) {
 		this.name = name;
 	}
