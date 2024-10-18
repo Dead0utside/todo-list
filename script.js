@@ -26,13 +26,17 @@ function addTask() {
 	let newTaskElement = document.createElement("section");
 	newTaskElement.className = "task-container";
 
+	const checkbox = document.createElement("input");
+	checkbox.className = "checkbox";
+	checkbox.type = "checkbox";
+
 	const taskName = document.createElement("p");
 	taskName.className = "task-name";
 	taskName.textContent = taskInputForm1.value;
 
-	const checkbox = document.createElement("input");
-	checkbox.className = "checkbox";
-	checkbox.type = "checkbox";
+	const deleteBtn = document.createElement("button");
+	deleteBtn.className = "delete-btn";
+	deleteBtn.id = "delete-btn";
 
 	newTaskElement.appendChild(taskName);
 	newTaskElement.appendChild(checkbox);
