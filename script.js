@@ -27,10 +27,11 @@ function addTask() {
 	newTaskElement.className = "task-container";
 
 	const taskName = document.createElement("p");
-	taskName.className = "task-name"; // Set the class
+	taskName.className = "task-name";
 	taskName.textContent = taskInputForm1.value;
 
 	const checkbox = document.createElement("input");
+	checkbox.className = "checkbox";
 	checkbox.type = "checkbox";
 
 	newTaskElement.appendChild(taskName);
