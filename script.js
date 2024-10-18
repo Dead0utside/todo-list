@@ -20,11 +20,9 @@ const todoList1 = document.getElementById("todolist-1");
 const taskInputForm1 = document.getElementById("input-1");
 const addTaskButton1 = document.getElementById("submit-1");
 
-addTaskButton1.addEventListener("click", (taskInputForm1) =>
-	addTask(taskInputForm1)
-);
+addTaskButton1.addEventListener("click", () => addTask());
 
-function addTask(toDoList) {
+function addTask() {
 	let newTaskElement = document.createElement("section");
 	newTaskElement.className = "task-container";
 
