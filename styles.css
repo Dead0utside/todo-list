@@ -1,30 +1,47 @@
 /* Styling goes here */
+* {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
 :root {
     /* colors */
     --white: #F9FCFF;
     --light-blue: #ADE8E8;
     --purple: #D1C4F1;
     --dark-blue: #123040;
-    --sky-blue: 94C9DB;
+    --sky-blue: #94C9DB;
 
     /* font size */
     --title: 3em;
     --subtitle: 1.5em;
     --text: 1em;
+
+    /* font family */
+    --font-title: 'Times New Roman', Times, serif;
+    --font-task:  Arial, Helvetica, sans-serif;
+    
 }
 
-.todo-list {
-    border: 1px solid black;
+body {
+    background-color: var(--white);
+}
+
+h1 {
+    color: var(--dark-blue);
+    font-size: var(--title);
+    text-align: center;
+    font-family: var(--font-title);
 }
 
 .workspace {
-    background-color: red;
+    background-color: var(--white);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5vh 5vw;
-    column-gap: 2vw;
+    gap: 2vh 2vw;
 }
 
 .todo-list {
@@ -33,5 +50,30 @@
     width: 25vw;
     height: auto;
     padding: 1.5vh 1.5vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
 
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 1vw;
+
+}
+
+.input {
+    width: 100%;
+    flex-grow: 2;
+    border-radius: 10px;
+    padding: 1vh 0 1vh 1vw;
+}
+
+.btn-add{
+    flex-grow: 1;
+    border-radius: 20px;
+    font-size: var(--subtitle);
+    width: 3vw;
 }
