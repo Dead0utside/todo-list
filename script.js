@@ -24,9 +24,9 @@ addTaskButton1.addEventListener("click", (taskInputForm1) =>
 	addTask(taskInputForm1)
 );
 
-function addTask(taskInputForm) {
-	let newTask = document.createElement("section");
-	newTask.className = "task-container";
+function addTask(toDoList) {
+	let newTaskElement = document.createElement("section");
+	newTaskElement.className = "task-container";
 
 	const taskName = document.createElement("p");
 	taskName.className = "task-name"; // Set the class
@@ -35,8 +35,8 @@ function addTask(taskInputForm) {
 	const checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
 
-	newTask.appendChild(taskName);
-	newTask.appendChild(checkbox);
+	newTaskElement.appendChild(taskName);
+	newTaskElement.appendChild(checkbox);
 
-	todoList1.appendChild(newTask);
+	todoList1.appendChild(newTaskElement);
 }
