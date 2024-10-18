@@ -9,6 +9,7 @@ class Task {
 class ToDoList {
 	constructor(name) {
 		this.name = name;
+		this.tasks = [];
 	}
 	color;
 }
