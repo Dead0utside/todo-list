@@ -146,3 +146,24 @@ ul {
     text-decoration: line-through;
 }
 
+.delete-btn {
+    font-size: var(--font-task);
+    background-color: rgb(255, 0, 0, 0);
+    text-align: center;
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 50%;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn::before {
+    content: '\00D7'; /* Unicode character for multiplication sign */
+    font-size: 2em;
+}
+
+.delete-btn:hover {
+    color: var(--dark-blue);
+}
