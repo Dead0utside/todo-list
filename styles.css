@@ -1,1 +1,14 @@
 /* Styling goes here */
+root {
+    /* colors */
+    --white: #F9FCFF;
+    --light-blue: #ADE8E8;
+    --purple: #D1C4F1;
+    --dark-blue: #123040;
+    --sky-blue: 94C9DB;
+
+    /* font size */
+    --title: 3em;
+    --subtitle: 1.5 em;
+    --text: 1em;
+}
