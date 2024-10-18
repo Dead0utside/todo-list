@@ -6,7 +6,7 @@ class Task {
 	}
 }
 
-class TaskCard {
+class TaskList {
 	constructor(name) {
 		this.name = name;
 	}
