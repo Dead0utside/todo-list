@@ -34,6 +34,7 @@ h1 {
     font-size: var(--title);
     text-align: center;
     font-family: var(--font-title);
+    padding: 10vh 10vw;
 }
 
 .workspace {
@@ -49,12 +50,13 @@ h1 {
 .todo-list {
     background-color: var(--purple);
     border-radius: 10px;
-    width: 25vw;
+    width: 30vw;
     height: auto;
     padding: 1.5vh 1.5vw;
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .input-container {
@@ -80,42 +82,17 @@ h1 {
     width: 3vw;
 }
 
+.btn-add:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
 .task-container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 10px;
-}
-
-.task-name {
-    flex-grow: 2;
-    border-bottom:  .5px solid #123040;
-    padding-left: 1vw;
-}
-
-.checkbox {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.checkbox:checked {
-    background-color: var(--white);
-    cursor: pointer;
-}
-
-.checkbox:checked + .task-name {
-    text-decoration: line-through;
-}
-
-
-.task-container {
-    display: flex;
 }
 
 ul {
@@ -126,3 +103,52 @@ ul {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.task-name {
+    flex-grow: 2;
+    border-bottom:  .5px solid #123040;
+    padding-left: 1vw;
+    font-family: var(--font-task);
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--white);
+    position: relative;
+}
+
+.checkbox:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.checkbox:checked {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.checkbox:checked::after {
+    content: '\2713'; /* Unicode character for check mark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+.checkbox:checked + .task-name {
+    text-decoration: line-through;
+}
+}
+
+
+.task-container {
+    display: flex;
+}
+
